@@ -2,6 +2,9 @@ document.addEventListener("DOMContentLoaded", function() {
     const settled = true;
     const header = document.querySelector('header')
     const navbar = document.getElementById('navbar')
+    const hamIcon = document.getElementById('hamIcon');
+    const drawer = document.getElementById('drawer');
+    const drawerCloseBtn = document.getElementById('drawerCloseBtn');
     navbar.classList.add('animated', settled ? 'settled' : '')
 
     const alertDiv = document.getElementById('alert')
@@ -18,4 +21,12 @@ document.addEventListener("DOMContentLoaded", function() {
       alertDiv.classList.remove('open')
       titleDiv.classList.remove('titleOpen')
     });
+
+    hamIcon.addEventListener('click', function() {
+        drawer.classList.add('open');
+      });
+
+      drawerCloseBtn.addEventListener('click', function() {
+        drawer.classList.remove('open');
+      });
   });

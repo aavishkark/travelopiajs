@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travelopia</title>
+  <link rel="stylesheet" href="home.css">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <div id='navbar' class='animated'>
+        <button class='link'>Home</button>
+        <button class='link'>Packages</button>
+        <button class='link'>Bookings</button>
+        <button class='link'>About</button>
+        <button class='link'>Contact</button>
+      </div>
+      <div id='navIcon'>
+        <button class='link' id='hamIcon'></button>
+      </div>
+    </header>
+
+    <div class='container'>
+      <img id="backgroundImage" src="https://images.pexels.com/photos/346885/pexels-photo-346885.jpeg" alt="view of a golbe in hand" loading="lazy"/>
+      <div id="overlay"></div>
+      <div id='alert' class='alert'>
+        <p id='alertText' style='font-size: x-large;'>Hello, World</p>
+        <button id='okBtn'>Ok</button>
+      </div>
+      <div id="title" class='title'>
+        <p id='titleText'>Welcome To Travelopia</p>
+        <button id="clickBtn">Click Here</button>
+      </div>
+    </div>
+
+    <footer>
+      Copyright © 2024 Travelopia. All rights reserved.
+    </footer>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const settled = true;
+      const header = document.querySelector('header')
+      const navbar = document.getElementById('navbar')
+      navbar.classList.add('animated', settled ? 'settled' : '')
+
+      const alertDiv = document.getElementById('alert')
+      const titleDiv = document.getElementById('title')
+      const clickBtn = document.getElementById('clickBtn')
+      const okBtn = document.getElementById('okBtn')
+
+      clickBtn.addEventListener('click', function() {
+        alertDiv.classList.add('open')
+        titleDiv.classList.add('titleOpen')
+      });
+
+      okBtn.addEventListener('click', function() {
+        alertDiv.classList.remove('open')
+        titleDiv.classList.remove('titleOpen')
+      });
+    });
+  </script>
+</body>
+</html>

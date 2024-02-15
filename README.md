@@ -2,7 +2,7 @@
 This app is about the task that was assigned me by travelopia as part of the hiring process.
 
 # Deployment
-[FrontEnd Deployed Link](https://65ccf4bbce11cc033314ec07--glittery-yeot-d2f6ad.netlify.app/)
+[FrontEnd Deployed Link](https://glittery-yeot-d2f6ad.netlify.app/)
 
 # TechStack
 
